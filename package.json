@@ -1,0 +1,16 @@
+{
+  "name": "ollama-chat-playground",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:server": "pnpm --filter server dev",
+    "dev": "concurrently \"pnpm dev:web\" \"pnpm dev:server\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
